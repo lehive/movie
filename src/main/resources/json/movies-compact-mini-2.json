@@ -1,0 +1,24 @@
+[
+  {
+    "name": "Avengers: Endgame",
+    "year": 2018,
+    "ageLimit": 12,
+    "rating": 4,
+    "director": {
+      "firstName": "Anthony",
+      "lastName": "Russo"
+    },
+    "synopsis": "After the devastating events of Avengers: Infinity War (2018), the universe is in ruins. With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos' actions and restore balance to the universe."
+  },
+  {
+    "name": "The Curse of the Were-Rabbit",
+    "year": 2005,
+    "ageLimit": 12,
+    "rating": 4,
+    "director": {
+      "firstName": "Steve",
+      "lastName": "Box"
+    },
+    "synopsis": "Wallace and his loyal dog, Gromit, set out to discover the mystery behind the garden sabotage that plagues their village and threatens the annual giant vegetable growing contest."
+  }
+]
