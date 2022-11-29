@@ -16,7 +16,7 @@ import java.util.List;
 @SpringBootApplication
 public class MovieApplication {
 
-    public static final String JSON_MOVIES_COMPACT_JSON = "/json/movies-compact-mini-1.json";
+    public static final String JSON_MOVIES_COMPACT_JSON = "/json/movies-compact.json";
 
     public static void main(String[] args) {
         SpringApplication.run(MovieApplication.class, args);

@@ -1,10 +1,14 @@
 package com.lehive.movie.entity;
 
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
 import org.hibernate.Hibernate;
 
 import java.util.Objects;
+import java.util.Set;
 
 @Entity
 @Getter
@@ -22,6 +26,12 @@ public class Movie {
     private String ageLimit;
     private String rating;
     private String synopsis;
+    @Embedded
+    private Director director;
+    @ElementCollection
+    private Set<String> genres;
+    @ElementCollection
+    private Set<Actor> actors;
 
     @Override
     public boolean equals(Object o) {
