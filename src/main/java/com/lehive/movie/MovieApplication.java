@@ -4,6 +4,7 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.lehive.movie.entity.Movie;
 import com.lehive.movie.service.MovieService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -13,6 +14,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
 
+@Slf4j
 @SpringBootApplication
 public class MovieApplication {
 
@@ -32,9 +34,9 @@ public class MovieApplication {
                 ObjectMapper mapper = new ObjectMapper();
                 List<Movie> movies = mapper.readValue(inputStream, typeReference);
                 movieService.saveMovieList(movies);
-                System.out.println("Movies saved: " + movies);
+                log.info("Movies saved to H2 database");
             } catch (IOException e) {
-                System.out.println("Unable to save movies: " + e.getMessage());
+                log.error("Unable to save movies: " + e.getMessage());
             }
         };
     }

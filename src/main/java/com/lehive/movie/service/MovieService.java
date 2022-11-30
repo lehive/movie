@@ -2,6 +2,7 @@ package com.lehive.movie.service;
 
 import com.lehive.movie.entity.Movie;
 import com.lehive.movie.repository.MovieRepository;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

@@ -1,3 +1,10 @@
+This application is related to movie db. With the current solution it is possible to:
+ - search movie by id
+ - list all movies
+ - add a movie
+
+Postman request collection can be found at root of this application:
+ - Movie_database_app.postman_collection.json
 
 ---
 - H2 Database - General

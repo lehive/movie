@@ -1,0 +1,101 @@
+{
+	"info": {
+		"_postman_id": "fa75db51-37ae-44dc-913e-a0d490e36347",
+		"name": "Movie database app export",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24214375"
+	},
+	"item": [
+		{
+			"name": "List all movies",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{http}}{{localhost}}/v1/movie",
+					"host": [
+						"{{http}}{{localhost}}"
+					],
+					"path": [
+						"v1",
+						"movie"
+					]
+				},
+				"description": "Returns a paginated list of user objects for a workspace"
+			},
+			"response": []
+		},
+		{
+			"name": "Add movie to database",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Avengers: Firsta Avenger\",\r\n    \"year\": 2015,\r\n    \"ageLimit\": 12,\r\n    \"rating\": 4,\r\n    \"synopsis\": \"First Avenger\",\r\n    \"director\": {\r\n        \"firstName\": \"Anthony\",\r\n        \"lastName\": \"Russo\"\r\n    },\r\n    \"genres\": [\r\n        \"Sci-fi\",\r\n        \"Adventure\"\r\n    ],\r\n    \"actors\": [\r\n        {\r\n            \"firstName\": \"Chris\",\r\n            \"lastName\": \"Evans\"\r\n        },\r\n        {\r\n            \"firstName\": \"Robert\",\r\n            \"lastName\": \" Downey Jr.\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{http}}{{localhost}}/v1/movie",
+					"host": [
+						"{{http}}{{localhost}}"
+					],
+					"path": [
+						"v1",
+						"movie"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find movie by Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{http}}{{localhost}}/v1/movie/1",
+					"host": [
+						"{{http}}{{localhost}}"
+					],
+					"path": [
+						"v1",
+						"movie",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "localhost",
+			"value": "localhost:8080"
+		}
+	]
+}
