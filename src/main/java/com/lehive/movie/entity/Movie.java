@@ -1,6 +1,7 @@
 package com.lehive.movie.entity;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotEmpty;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
@@ -21,10 +22,11 @@ public class Movie {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "movie_id")
     private Integer id;
+    @NotEmpty
     private String name;
-    private String year;
-    private String ageLimit;
-    private String rating;
+    private Integer year;
+    private Integer ageLimit;
+    private Integer rating;
     private String synopsis;
     @Embedded
     private Director director;
