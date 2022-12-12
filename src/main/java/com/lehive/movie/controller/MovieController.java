@@ -31,4 +31,9 @@ public class MovieController {
         return movieService.findById(id);
     }
 
+    @DeleteMapping("/movie/delete/{id}")
+    public void deleteMovieById(@PathVariable Long id) {
+        movieService.deleteMovieById(id);
+    }
+
 }

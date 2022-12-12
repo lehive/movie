@@ -19,3 +19,12 @@ Postman request collection can be found at root of this application:
   - User Name: sa
   - Password: \<empty\>
 ----
+
+----
+### Docker
+ - build
+   - docker build -f Dockerfile -t my-movie-app .
+ - run
+   - docker run -p 9010:8080 -it --rm my-movie-app
+ - H2 Console
+   - Sorry, remote connections ('webAllowOthers') are disabled on this server.

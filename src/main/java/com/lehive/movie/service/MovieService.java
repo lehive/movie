@@ -32,4 +32,8 @@ public class MovieService {
     public Optional<Movie> findById(Integer id) {
         return movieRepository.findById(Long.valueOf(id));
     }
+
+    public void deleteMovieById(Long id) {
+        movieRepository.deleteById(id);
+    }
 }
